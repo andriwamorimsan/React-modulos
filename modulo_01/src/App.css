@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.card_topper{
+  background-color: blue;
+  align-content: center;
+ justify-self: center;
+  width: 500px;
+
+}
+.card_body{
+  background-color:  #1a1a1a;
+}
