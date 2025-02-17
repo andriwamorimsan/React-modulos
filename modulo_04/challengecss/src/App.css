@@ -1,0 +1,13 @@
+h1{
+    color: orange;
+    background: #000000;
+}
+
+.car-container{
+    display: flex;
+    justify-content: center;
+}
+
+.car-container div{
+    margin-top: 50px;
+}
