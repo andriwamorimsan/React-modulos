@@ -5,8 +5,8 @@ import MyForm from "./components/MyForm.jsx";
 function App() {
   return (
     <>
-      <h1>Forms</h1>
-      <MyForm/>
+      <h1 className="nomeForms">Forms</h1>
+      <MyForm user={{name: "josias", email: "josias@gmail.com", bio: "sou advogado", role: "admin"}}/>
     </>
   )
 }
