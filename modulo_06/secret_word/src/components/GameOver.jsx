@@ -1,8 +1,11 @@
 import "./GameOver.css";
 
-const GameOver = () => {
+const GameOver = ({verifyLetter}) => {
     return (
-        <div>GameOver</div>
+        <div>
+            <h1>Game Over</h1>
+
+        </div>
     )
 }
 export default GameOver

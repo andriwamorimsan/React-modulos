@@ -24,12 +24,20 @@ function App() {
     const [gameStage, setGameStage] = useState(stages[0].name);
     const [words] = useState(wordsList);
 
-    console.log(words)
+    // função para mudar stado de 0 (tela inicial) para [1] tela do jogo
+    const startGame = () =>{
+        setGameStage(stages[1].name);
+    };
+
+  //   processo de inserir letra
+    const verifyLetter = () => {
+        setGameStage(stages[3].name);
+    };
 
   return (
     <div className="App">
-        {gameStage === 'start' && <StartScreen/>}
-        {gameStage === 'game' && <Game/>}
+        {gameStage === 'start' && <StartScreen startGame={startGame}/>}
+        {gameStage === 'game' && <Game  verifyLetter={verifyLetter} />}
         {gameStage === 'end' && <GameOver/>}
       <div >
 
