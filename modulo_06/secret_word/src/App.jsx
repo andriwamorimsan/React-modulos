@@ -3,7 +3,7 @@
 import './App.css';
 
 // hooks
-import {use, useCallback, useEffect, useState} from "react";
+import { useCallback, useEffect, useState} from "react";
 
 // importação dos dados
 import {wordsList} from "./data/words.jsx";
@@ -19,7 +19,7 @@ const stages = [
     {id: 3, name: "end"},
 ];
 
-const guessesQty = 3;
+const guessesQty = 5;
 
 // iniciando para jogar na main
 function App() {
@@ -37,35 +37,36 @@ function App() {
     const [score, setScore] = useState(0);
 
     // função que escolhe categoria aleatoria
-    const pickWordAndCategory = () => {
+    const pickWordAndCategory = useCallback(() => {
         const categories = Object.keys(words);
         const category = categories[Math.floor(Math.random() * Object.keys(categories).length)];
 
     //  função que entra dentro das categorias e escolhe uma palavra aleatoria no array
         const word = words[category][Math.floor(Math.random()) * words[category].length];
         return {word, category};
-    }
+    }, [words]);
 
     // função para mudar stado de 0 (tela inicial) para [1] tela do jogo
-    const startGame = () =>{
-        // escolhendo palabra e categoria
+    const startGame = useCallback(() => {
+        // limpando todas as letras já escolhidas
+        clearLetterStates();
 
+        console.log(score===0)
+
+
+        // escolhendo palabra e categoria
         const {word, category} = pickWordAndCategory();
 
         let wordLetters = word.split("");
 
         wordLetters = wordLetters.map((variavelCriada) => variavelCriada.toLowerCase() );
 
-        console.log(word,category);
-        console.log(wordLetters);
-
         // setar os status
         setPickedWord(word);
         setPickedCategory(category);
         setLetters(wordLetters);
-
-        setGameStage(stages[1].name);
-    };
+        setGameStage(stages[1].name );
+    }, [pickWordAndCategory]);
 
   //   processo de inserir letra
     const verifyLetter = (letter) => {
@@ -116,15 +117,13 @@ function App() {
     // condição para vencer
     if (guessedLetters.length === uniqueLetters.length) {
         //adicionar score
-        setScore((actualScore) => actualScore += 10)
+        setScore((actualScore) => actualScore += 50)
 
         // resetar para próxima palavra
         startGame();
     }
 
-    console.log(uniqueLetters);
-
-    }, [guessedLetters]);
+    }, [guessedLetters, letters, startGame]);
 
 
     // reiniciando jogo
