@@ -1,24 +1,39 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Camisa",
       "price": 59.9
     },
     {
-    "id": 2,
-    "name": "Calça vermelha",
-    "price": 90
+      "id": "2",
+      "name": "Calça vermelha",
+      "price": 90
     },
     {
-    "id": 3,
-    "name": "Boné aba reta",
-    "price": 29.9
+      "id": "3",
+      "name": "Boné aba reta",
+      "price": 29.9
     },
     {
-    "id": 4,
-    "name": "Camiseta",
-    "price": 59.9
+      "id": "4",
+      "name": "Camiseta",
+      "price": 59.9
+    },
+    {
+      "id": "88c4",
+      "name": "teclado",
+      "price": "110"
+    },
+    {
+      "id": "3ff9",
+      "name": "cadeira",
+      "price": "200"
+    },
+    {
+      "id": "57a1",
+      "name": "mesa",
+      "price": "250"
     }
   ]
 }

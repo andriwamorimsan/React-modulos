@@ -45,7 +45,13 @@ const handleSubmit = async (e) =>{
         body: JSON.stringify(product),
     });
 
+//     3 - carregamento dinâmico
+    const addedProduct = await res.json();
 
+    setProducts((previewProducts) => [...previewProducts, addedProduct ]);
+
+    setName("");
+    setPrice("");
 }
 
 
@@ -66,11 +72,11 @@ const handleSubmit = async (e) =>{
               <form onSubmit={handleSubmit}>
                   <label>
                       Nome:
-                      <input type="text" value={name} name="name" onChange={(e) => setName(e.target.value)}/>
+                      <input type="text" value={name} name="name" onChange={(nome_do_valor) => setName(nome_do_valor.target.value)}/>
                   </label>
                   <label>
                       Preço:
-                      <input type="number" value={price} name="price" onChange={(e) => setPrice(e.target.value)}/>
+                      <input type="number" value={price} name="price" onChange={(nome_do_valor) => setPrice(nome_do_valor.target.value)}/>
                   </label>
                   <input type="submit" value="Criar"/>
               </form>
