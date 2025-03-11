@@ -94,8 +94,13 @@ const handleSubmit = async (e) =>{
                       Preço:
                       <input type="number" value={price} name="price" onChange={(nome_do_valor) => setPrice(nome_do_valor.target.value)}/>
                   </label>
-                  <input type="submit" value="Criar"/>
-              </form>
+                  {/*7 - state de loading no post*/}
+                  {/*tirar o botao quando o state tiver ativo*/}
+
+                  {loading && <input type="submit" disabled value="Aguarde"/> }
+                  {!loading && <input type="submit" value="Criar"/> }
+
+               </form>
           </div>
 
       </div>
