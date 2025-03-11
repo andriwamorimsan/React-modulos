@@ -21,9 +21,24 @@
       "price": 59.9
     },
     {
-      "id": "5617",
-      "name": "carrinho",
-      "price": "10.00"
+      "id": "88c4",
+      "name": "teclado",
+      "price": "110"
+    },
+    {
+      "id": "3ff9",
+      "name": "cadeira",
+      "price": "200"
+    },
+    {
+      "id": "57a1",
+      "name": "mesa",
+      "price": "250"
+    },
+    {
+      "id": "cd6f",
+      "name": "mouse",
+      "price": "60"
     }
   ]
 }
