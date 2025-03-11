@@ -12,7 +12,7 @@ function App() {
   // variaveis
     const [products, setProducts] = useState([]);
     // utilizando hook para retornar os produtos
-    const {data: items, httpConfig} = useFetch(url)
+    const {data: items, httpConfig, loading} = useFetch(url)
 
 
 
@@ -72,6 +72,8 @@ const handleSubmit = async (e) =>{
     <>
       <div className="App">
           <h1>Lista de produtos</h1>
+          {/*6 - loading*/}
+          {loading && <p>Carregando dados...</p>}
           <ul>
               {items && items.map((produto) => (
                   <li key={produto.id}>

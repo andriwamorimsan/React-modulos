@@ -39,6 +39,17 @@
       "id": "cd6f",
       "name": "mouse",
       "price": "60"
+    },
+    {
+      "id": "19fb",
+      "name": "fone",
+      "price": "60"
+    },
+    {
+      "id": "9840",
+      "name": "suporte monitor ",
+      "price": "120"
     }
+
   ]
 }
