@@ -49,7 +49,21 @@
       "id": "9840",
       "name": "suporte monitor ",
       "price": "120"
+    },
+    {
+      "id": "29f2",
+      "name": "suporte monitor 2",
+      "price": "120"
+    },
+    {
+      "id": "2b77",
+      "name": "suporte monitor 3",
+      "price": "120"
+    },
+    {
+      "id": "59eb",
+      "name": "cabo hdmi",
+      "price": "10"
     }
-
   ]
 }

@@ -74,14 +74,16 @@ const handleSubmit = async (e) =>{
           <h1>Lista de produtos</h1>
           {/*6 - loading*/}
           {loading && <p>Carregando dados...</p>}
-          <ul>
-              {items && items.map((produto) => (
-                  <li key={produto.id}>
-                      {produto.name} - R$: {produto.price}
-                  </li>
-              ))}
+          {!loading &&(
+              <ul>
+                  {items && items.map((produto) => (
+                      <li key={produto.id}>
+                          {produto.name} - R$: {produto.price}
+                      </li>
+                  ))}
 
-          </ul>
+              </ul>
+          )}
           <div className="add-product">
               <form onSubmit={handleSubmit}>
                   <label>
