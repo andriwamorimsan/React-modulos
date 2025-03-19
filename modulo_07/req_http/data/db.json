@@ -51,11 +51,6 @@
       "price": "120"
     },
     {
-      "id": "29f2",
-      "name": "suporte monitor 2",
-      "price": "120"
-    },
-    {
       "id": "2b77",
       "name": "suporte monitor 3",
       "price": "120"
@@ -69,21 +64,6 @@
       "id": "2b4f",
       "name": "cabo sata",
       "price": "20"
-    },
-    {
-      "id": "6e1c",
-      "name": "cabo sata 2",
-      "price": "21"
-    },
-    {
-      "id": "1d83",
-      "name": "cabo sata 3",
-      "price": "14"
-    },
-    {
-      "id": "1c85",
-      "name": "cabo rj47",
-      "price": "23"
     }
   ]
 }

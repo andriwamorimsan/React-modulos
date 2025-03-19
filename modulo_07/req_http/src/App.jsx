@@ -66,6 +66,11 @@ const handleSubmit = async (e) =>{
     setPrice("");
 }
 
+  // desafio -6
+
+    const handleRemove = (id) => {
+        httpConfig(id, "DELETE")
+    };
 
   // view
   return (
@@ -76,9 +81,10 @@ const handleSubmit = async (e) =>{
           {loading && <p>Carregando dados...</p>}
           {!loading &&(
               <ul>
-                  {items && items.map((produto) => (
-                      <li key={produto.id}>
-                          {produto.name} - R$: {produto.price}
+                  {items && items.map((products) => (
+                      <li key={products.id}>
+                          {products.name} - R$: {products.price}
+                          <button onClick={() => handleRemove(products.id)}>Excluir</button>
                       </li>
                   ))}
 
